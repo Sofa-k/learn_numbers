@@ -1,17 +1,20 @@
 import copy
 def lucky():
     def eliminator(step,sequnce_i):
-        each = 0
+        each = 1
         while each<len(sequnce_i):
-            if each in sequnce_i:
-                sequnce_i.remove(each)
-            each += step
-            print('hhh')
+            if (each+1) % step == 0:
+                sequnce_i.pop(each)
+                each += 1
+            each += 1
+
         return sequnce_i
     sequence = []
     for each in range(1,10):
         sequence.append(each)
+
     print(sequence)
-    print(eliminator(2,sequence))
-    print(eliminator(3,sequence))
+    done = eliminator(2,sequence)
+    print(done)
+
 lucky()
