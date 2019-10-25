@@ -1,20 +1,24 @@
-import copy
 def lucky():
-    def eliminator(step,sequnce_i):
-        each = 1
-        while each<len(sequnce_i):
-            if (each+1) % step == 0:
-                sequnce_i.pop(each)
-                each += 1
-            each += 1
+    raw = []
+    lucky_raw = []
+    def eliminator(raw,step):
+        i = 0
+        output_list = [1]
+        while i < len(raw):
+            if (i % (step-1) != 0):
+                output_list.append(raw[i])
+            i += 1
+        return output_list
 
-        return sequnce_i
-    sequence = []
-    for each in range(1,10):
-        sequence.append(each)
+    for each in range(1,20,2):
+        raw.append(each)
+    print(raw)
+    hog = eliminator(raw,3)
+    hog2 = eliminator(hog,5)
+    print(hog)
+    print(hog2)
 
-    print(sequence)
-    done = eliminator(2,sequence)
-    print(done)
 
-lucky()
+
+    return lucky_raw
+print(lucky())
