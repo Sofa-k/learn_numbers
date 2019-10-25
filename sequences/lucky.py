@@ -1,11 +1,12 @@
+import copy
 def lucky():
     raw = []
     lucky_raw = []
     def eliminator(raw,step):
         i = 0
-        output_list = [1]
+        output_list = []
         while i < len(raw):
-            if (i % (step-1) != 0):
+            if ((i+1) % (step) != 0):
                 output_list.append(raw[i])
             i += 1
         return output_list
@@ -20,5 +21,5 @@ def lucky():
 
 
 
-    return lucky_raw
+
 print(lucky())
