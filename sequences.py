@@ -51,8 +51,8 @@ def ulam_numbers(difficulty):
     arr2 = set()
     arr2.add(1)
     arr2.add(2)
-    for i in range(3, 1000):
-        if len(arr) == 50:
+    for i in range(3, 3000):
+        if len(arr) == 3000:
             break
         count = 0
         for j in range(0, len(arr)):
@@ -63,4 +63,5 @@ def ulam_numbers(difficulty):
         if count == 2:
             arr.append(i)
             arr2.add(i)
+
     return arr[random.randint(difficulty[0],difficulty[-1])]
