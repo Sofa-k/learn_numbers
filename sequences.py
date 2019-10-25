@@ -1,5 +1,19 @@
 import copy
 import random
+def sequence_cut(input_list, difficulty):
+    '''
+    (list,list) -> list
+    functions that removes all the elements that are not within the inputed range
+    >>> sequence_cut([1,2,5,6,19,20,21,34,45],[6,34])
+    [6, 19, 20, 21, 34]
+    '''
+    for each in copy.copy(input_list):
+        if each < difficulty[0]:
+            input_list.remove(each)
+        if each > difficulty[-1]:
+            input_list.remove(each)
+    return input_list
+
 def lucky_numbers(difficulty):
 
     raw = []
@@ -12,7 +26,7 @@ def lucky_numbers(difficulty):
                 output_list.append(raw[i])
             i += 1
         return output_list
-    for each in range(1,1500,2):
+    for each in range(1,difficulty[-1],2):
         raw.append(each)
     f = 1
     while 1:
@@ -20,11 +34,12 @@ def lucky_numbers(difficulty):
         if raw == eliminator(raw,raw[f]):
             break
         f += 1
-    return raw[random.randint(difficulty[0],difficulty[-1])]
+    raw = sequence_cut(raw,difficulty)
+    return raw[random.randrange(len(raw))]
 
-def prime_numbers(numbers):
+def prime_numbers(difficulty):
     figures = []
-    for i in range(numbers[1] + 1):
+    for i in range(difficulty[1] + 1):
         figures.append(i)
 
     prime_numbers = []
@@ -42,17 +57,16 @@ def prime_numbers(numbers):
                 else:
                     count += 1
                     continue
-
-    index = random.randrange(len(prime_numbers))
-    return prime_numbers[index]
+    prime_numbers = sequence_cut(prime_numbers,difficulty)
+    return prime_numbers[random.randrange(len(prime_numbers))]
 
 def ulam_numbers(difficulty):
     arr = [1,2]
     arr2 = set()
     arr2.add(1)
     arr2.add(2)
-    for i in range(3, 3000):
-        if len(arr) == 3000:
+    for i in range(3, difficulty[-1]):
+        if len(arr) == difficulty[-1]:
             break
         count = 0
         for j in range(0, len(arr)):
@@ -63,5 +77,5 @@ def ulam_numbers(difficulty):
         if count == 2:
             arr.append(i)
             arr2.add(i)
-
-    return arr[random.randint(difficulty[0],difficulty[-1])]
+    arr = sequence_cut(arr,difficulty)
+    return arr[random.randrange(len(arr))]
