@@ -12,7 +12,7 @@ def lucky_numbers(difficulty):
                 output_list.append(raw[i])
             i += 1
         return output_list
-    for each in range(1,1000,2):
+    for each in range(1,1500,2):
         raw.append(each)
     f = 1
     while 1:
@@ -64,4 +64,3 @@ def ulam_numbers(difficulty):
             arr.append(i)
             arr2.add(i)
     return arr[random.randint(difficulty[0],difficulty[-1])]
-    
