@@ -20,9 +20,3 @@ def lucky(difficulty):
             break
         f += 1
     return raw[random.randint(difficulty[0],difficulty[-1])]
-
-
-
-difficulty = ([0,20],[21,100],[101,200])
-x = 2
-print(lucky(difficulty[x-1]))
