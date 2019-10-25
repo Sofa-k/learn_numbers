@@ -1,6 +1,7 @@
 import copy
 import random
 def lucky(difficulty):
+
     raw = []
     lucky_raw = []
     def eliminator(raw,step):
