@@ -1,6 +1,6 @@
 import copy
 import random
-def lucky(difficulty):
+def lucky_numbers(difficulty):
 
     raw = []
     lucky_raw = []
@@ -22,7 +22,7 @@ def lucky(difficulty):
         f += 1
     return raw[random.randint(difficulty[0],difficulty[-1])]
 
-def define_prime_numbers(numbers):
+def prime_numbers(numbers):
     figures = []
     for i in range(numbers[1] + 1):
         figures.append(i)
@@ -64,3 +64,4 @@ def ulam_numbers(difficulty):
             arr.append(i)
             arr2.add(i)
     return arr[random.randint(difficulty[0],difficulty[-1])]
+    
