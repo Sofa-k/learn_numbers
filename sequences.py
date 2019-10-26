@@ -1,9 +1,10 @@
 import copy
 import random
+
 def sequence_cut(input_list, difficulty):
     '''
     (list,list) -> list
-    functions that removes all the elements that are not within the inputed range
+    function that removes all the elements that are not within the inputed range
     >>> sequence_cut([1,2,5,6,19,20,21,34,45],[6,34])
     [6, 19, 20, 21, 34]
     '''
