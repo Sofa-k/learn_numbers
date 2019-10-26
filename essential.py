@@ -2,6 +2,7 @@ import sys
 import res
 def draw(gun,man,heart,user_live):
     global_line = []
+    #add hearts of user
     heart_u = heart[0]*user_live+heart[1]*user_live
     heart_u = denester(heart_u,2,len(heart[0])*user_live)
     for each in heart_u:
