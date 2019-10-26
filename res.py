@@ -70,6 +70,6 @@ cowboy_dead = """
           /_\  /_\            HHeight16
 """
 heart = r"""
- (\/) H
-  \/  H
+(\/)H
+  \/H
 """

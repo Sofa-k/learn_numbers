@@ -27,8 +27,6 @@ def denester(asciistr,height,width):
     '''
     output_list = []
     asciistr = list(asciistr)
-    width = len(asciistr)/height
-    print(width)
     i = 1
     ch = 0
     while i <= height:
