@@ -1,16 +1,49 @@
 revolver = r"""
-                       X
-    _   _________=__   X
-    \\@([____]_____()  X
-    _/\|-[____]        X
-    /     /(( )        X
-    /____|             X
-    \____/             X
-                       X
+                       H
+    _   _________=__   H
+    \\@([____]_____()  H
+    _/\|-[____]        H
+    /     /(( )        H
+    /____|             H
+    \____/             H
+                       HHeight8
 """
-
-
-
+cowboy_alive = """
+             ___              H
+          __|___|__           H
+           ('o_o')            H
+.___ __    _\~-~/_            H
+' ---[_)~ / /\__/\\           H
+     (_\/. )O  O(  \          H
+       \_/ \    /  /          H
+          /_|  |_\(           H
+         / /(\/)\ \\          H
+        /_/      \_\          H
+       (_||      ||_)         H
+         \| |__| |/           H
+          | |  | |            H
+          | |  | |            H
+          |_|  |_|            H
+          /_\  /_\            HHeight16
+"""
+cowboy_dead = """
+             ___              H
+          __|___|__           H
+           ('X_X')            H
+.___ __    _\~-~/_            H
+' ---[_)~ / /\__/\\           H
+     (_\/. )O  O(  \          H
+       \_/ \    /  /          H
+          /_|  |_\(           H
+         / /(\/)\ \\          H
+        /_/      \_\          H
+       (_||      ||_)         H
+         \| |__| |/           H
+          | |  | |            H
+          | |  | |            H
+          |_|  |_|            H
+          /_\  /_\            HHeight16
+"""
 def denester(asciistr,height):
     '''
     function that makes a lists from an ascii docstring image
@@ -25,7 +58,7 @@ def denester(asciistr,height):
     while i <= height:
         line = []
         while ch < width:
-            if (asciistr[ch] == 'X'):
+            if (asciistr[ch] == 'H'):
                 break
             elif (asciistr[ch] != '\n'):
                 line.append(asciistr[ch])
@@ -35,3 +68,5 @@ def denester(asciistr,height):
         width *=2
         output_list.append(line)
     return output_list
+
+print(denester(revolver,8))
