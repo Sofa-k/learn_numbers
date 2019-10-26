@@ -41,9 +41,7 @@ def question_text_formator(question_text,text_area):
     j = 0
     while i < len(text_area):
         if (i != 0 or i != -1) and j < 4:
-            print(j,'hahah')
             text_area[i+1]= '| '+ question_text[j] + ' '*(58-len(question_text[j])-1) + '|'
-            print(j,'nope')
             j += 1
         i += 1
     return text_area
