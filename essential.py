@@ -3,6 +3,7 @@ import res
 def draw(gun,man,heart,user_live,man_live,score):
     global_line = []
     status_line = []
+    score = 'Score: ' + str(score)
     #add hearts of user
     heart_u = heart[0]*user_live+heart[1]*user_live
     heart_u = denester(heart_u,2,len(heart[0])*user_live)
@@ -11,11 +12,11 @@ def draw(gun,man,heart,user_live,man_live,score):
     heart_m = denester(heart_m,2,len(heart[0])*man_live)
 
     # by default line lenght = 93 but it is calucalated after line 25 if this is line 14
-    space1 = ' '*(93//2-len(heart_u[0]))
-    space2 = ' '*(93//2-len(heart_m[0]))
+    space1 = ' '*((93//2)-len(heart_u[0])-len(score))
+    space2 = ' '*((93//2)-len(heart_m[0])-len(score))
 
-    status_line.extend(''.join(heart_u[0]+space1+str(score)+space2+heart_m[0]+'H'))
-    status_line.extend(''.join(' '+heart_u[1]+space1+' '*len(str(score))+space2+' '+heart_m[1]+'H'))
+    status_line.extend(''.join(heart_u[0]+space1+score+space2+heart_m[0]+'H'))
+    status_line.extend(''.join(' '+heart_u[1]+space1+' '*len(score)+space2+' '+heart_m[1]+'H'))
     status_line = denester(status_line,2,len(status_line)/2)
 
     for each in status_line:
