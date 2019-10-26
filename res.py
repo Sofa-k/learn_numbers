@@ -11,27 +11,27 @@ revolver = r"""
 
 
 
-def denester(heigh,code):
+def denester(asciistr,height):
     '''
     function that makes a lists from an ascii docstring image
+    >>> denester([--+--X\n--+--X],2)
+    [['-', '-', '+', '-', '-'], ['-', '-', '+', '-', '-']]
     '''
     output_list = []
-    code = list(code)
-    width = len(code)/heigh
+    asciistr = list(asciistr)
+    width = len(asciistr)/height
     i = 1
-    x = 0
-    while i <= heigh:
+    ch = 0
+    while i <= height:
         line = []
-        while x < width:
-            if (code[x] == 'X'):
+        while ch < width:
+            if (asciistr[ch] == 'X'):
                 break
-            elif (code[x] != '\n'):
-                line.append(code[x])
-            x += 1
-        x += 1
+            elif (asciistr[ch] != '\n'):
+                line.append(asciistr[ch])
+            ch += 1
+        ch += 1
         i += 1
         width *=2
         output_list.append(line)
     return output_list
-
-denester(7,revolver)
