@@ -6,6 +6,7 @@ def draw(gun,man):
             code = str(i * 16 + j)
             sys.stdout.write(u"\u001b[38;5;" + code + "m " + code.ljust(4))
     print(u"\u001b[0m")
+    sdkmskdjslklj
     '''
     global_line = []
     for line in range(16):
