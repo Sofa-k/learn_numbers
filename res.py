@@ -94,5 +94,5 @@ def denester(asciistr,height):
     return output_list
 
 revolver = denester(revolver,16)
-
+cowboy_alive = denester(cowboy_alive,16)
 revolver_shot = denester(revolver_shot,8)
