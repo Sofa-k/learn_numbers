@@ -1,5 +1,5 @@
 import sequences
-from processing_unit import *
+#from processing_unit import *
 from essential import *
 from res import *
 # _________________
@@ -22,8 +22,9 @@ x = 2
 print(sequences.lucky_numbers(diff_list[x]))
 print(sequences.prime_numbers(diff_list[x]))
 print(sequences.ulam_numbers(diff_list[x]))
-<<<<<<< HEAD
+
 #essential.draw()
+'''
 draw(revolver,cowboy_alive,heart,your_health,enemy_health,score)
 
 
@@ -44,9 +45,8 @@ while enemy_health > 0 and your_health > 0:
         your_health = your_health - 1
         print("Ouuch! That hurts", "Your healh is now: ", your_health)
 
+'''
 
-=======
 
 
 draw(revolver,cowboy_alive,heart,5,5,134)
->>>>>>> 08fa2a3bdea496578070699d560ef451c8890688
