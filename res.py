@@ -1,6 +1,8 @@
 revolver = r"""
                        H
                        H
+                       H
+                       H
     _   _________=__   H
     \\@([____]_____()  H
     _/\|-[____]        H
@@ -67,7 +69,7 @@ cowboy_dead = """
           |_|  |_|            H
           /_\  /_\            HHeight16
 """
-def denester(asciistr,height):
+def denester(asciistr,height,width):
     '''
     (string,int) -> list
     function slices an ascii docstring image into string lines
@@ -77,6 +79,7 @@ def denester(asciistr,height):
     output_list = []
     asciistr = list(asciistr)
     width = len(asciistr)/height
+    print(width)
     i = 1
     ch = 0
     while i <= height:
@@ -93,6 +96,6 @@ def denester(asciistr,height):
         output_list.append(''.join(line))
     return output_list
 
-revolver = denester(revolver,16)
-cowboy_alive = denester(cowboy_alive,16)
-revolver_shot = denester(revolver_shot,8)
+revolver = denester(revolver,16,len(revolver)/16)
+cowboy_alive = denester(cowboy_alive,16,len(cowboy_alive)/16)
+revolver_shot = denester(revolver_shot,8,len(revolver_shot)/8)

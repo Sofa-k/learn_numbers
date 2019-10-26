@@ -9,4 +9,3 @@ print(sequences.prime_numbers(diff_list[x]))
 print(sequences.ulam_numbers(diff_list[x]))
 #essential.draw()
 essential.draw(revolver,cowboy_alive)
-                       
