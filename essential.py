@@ -1,4 +1,5 @@
 import sys
+import res
 def draw(gun,man):
 
     '''for i in range(0, 16):
@@ -10,5 +11,8 @@ def draw(gun,man):
     '''
     global_line = []
     for line in range(16):
-        global_line.extend(''.join(gun[line]+(' '*16)+man[line]))
-    print(global_line)
+        global_line.extend(''.join(gun[line]+(' '*30)+man[line]+'H'))
+    global_line = res.denester(global_line,16,len(global_line)/16)
+
+    for each in global_line:
+        print(each)
