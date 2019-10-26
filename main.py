@@ -14,7 +14,7 @@ lucky_numbers = [7,8,9]
 diff_list = ((0,20),(21,100),(101,200))
 text_area = denester(text_area,7,len(text_area)/7)
 revolver = denester(revolver,9,len(revolver)/9)
-print(len(text_area))
+qustion_text_1 = denester(question_text_1,4,len(question_text_1)/4)
 revolver_shot = denester(revolver_shot,9,len(revolver_shot)/9)
 cowboy_alive = denester(cowboy_alive,16,len(cowboy_alive)/16)
 cowboy_dead = denester(cowboy_dead,16,len(cowboy_dead)/16)
@@ -50,5 +50,6 @@ while enemy_health > 0 and your_health > 0:
 '''
 
 
+text_area = question_text_formator(qustion_text_1,text_area)
 
 draw(text_area,revolver,cowboy_alive,heart,5,5,134)

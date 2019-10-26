@@ -35,7 +35,18 @@ def draw(text_area,gun,man,heart,user_live,man_live,score):
 
     for each in global_line:
         print(each)
-
+def question_text_formator(question_text,text_area):
+    text_area = list(text_area)
+    i = 0
+    j = 0
+    while i < len(text_area):
+        if (i != 0 or i != -1) and j < 4:
+            print(j,'hahah')
+            text_area[i+1]= '| '+ question_text[j] + ' '*(58-len(question_text[j])-1) + '|'
+            print(j,'nope')
+            j += 1
+        i += 1
+    return text_area
 def denester(asciistr,height,width):
     '''
     (string,int) -> list
