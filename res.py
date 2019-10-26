@@ -1,7 +1,4 @@
-revolver = r"""
-                       H
-                       H
-                       H
+revolver = R"""
                        H
     _   _________=__   H
     \\@([____]_____()  H
@@ -14,9 +11,12 @@ revolver = r"""
                        H
                        H
                        H
+                       H
+                       H
+                       H
                        HHeight16
 """
-revolver_shot = r"""
+revolver_shot = R"""
                                         H
                            _ ' '        H
     _   _________=__   ''     '  '      H
@@ -33,7 +33,7 @@ revolver_shot = r"""
                                         H
                                         HHeight16
 """
-cowboy_alive = """
+cowboy_alive = R"""
              ___              H
           __|___|__           H
            ('o_o')            H
@@ -51,7 +51,7 @@ cowboy_alive = """
           |_|  |_|            H
           /_\  /_\            HHeight16
 """
-cowboy_dead = """
+cowboy_dead = R"""
              ___              H
           __|___|__           H
            ('X_X')            H
@@ -69,7 +69,7 @@ cowboy_dead = """
           |_|  |_|            H
           /_\  /_\            HHeight16
 """
-heart = r"""
-(\/)H
-  \/H
+heart = R"""
+(\/) H
+ \/  H
 """
