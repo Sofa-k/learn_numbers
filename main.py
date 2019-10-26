@@ -12,8 +12,10 @@ lucky_numbers = [7,8,9]
 # ________________
 
 diff_list = ((0,20),(21,100),(101,200))
-revolver = denester(revolver,16,len(revolver)/16)
-revolver_shot = denester(revolver_shot,16,len(revolver_shot)/16)
+text_area = denester(text_area,7,len(text_area)/7)
+revolver = denester(revolver,9,len(revolver)/9)
+print(len(text_area))
+revolver_shot = denester(revolver_shot,9,len(revolver_shot)/9)
 cowboy_alive = denester(cowboy_alive,16,len(cowboy_alive)/16)
 cowboy_dead = denester(cowboy_dead,16,len(cowboy_dead)/16)
 heart = denester(heart,2,len(heart)/2)
@@ -33,7 +35,7 @@ while enemy_health > 0 and your_health > 0:
     print(drawq[0])
     user_input = int(input())
     if your_health == 1:
-        print("Its either you or him! Make sure you don't miss this time")    #  <---- Пистолет направляется на юзера
+        print("Its either you or him! Make sure you don't miss this time")
 
     if ((user_input in ulam_numbers) and (drawq[1] == 1)) or \
             ((user_input in lucky_numbers) and (drawq[1] == 2)) or \
@@ -49,4 +51,4 @@ while enemy_health > 0 and your_health > 0:
 
 
 
-draw(revolver,cowboy_alive,heart,5,5,134)
+draw(text_area,revolver,cowboy_alive,heart,5,5,134)

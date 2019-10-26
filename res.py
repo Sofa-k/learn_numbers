@@ -7,14 +7,7 @@ revolver = R"""
     /     /(( )                                             H
     /____|                                                  H
     \____/                                                  H
-                                                            H
-                                                            H
-                                                            H
-                                                            H
-                                                            H
-                                                            H
-                                                            H
-                                                            HHeight16
+                                                            HHeight10
 """
 revolver_shot = R"""
                                                             H
@@ -27,12 +20,16 @@ revolver_shot = R"""
     \____/                                                  H
                                                             H
                                                             H
-                                                            H
-                                                            H
-                                                            H
-                                                            H
-                                                            H
-                                                            HHeight16
+                                                            Height16
+"""
+text_area = R"""
++----------------------------------------------------------+H
+|                                                          |H
+|                                                          |H
+|                          o|o                             |H
+|                                                          |H
+|                                                          |H
++----------------------------------------------------------+HHeight7
 """
 cowboy_alive = R"""
              ___              H
