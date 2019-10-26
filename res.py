@@ -72,9 +72,9 @@ heart = R"""
  \/  H
 """
 question_text_1 = """
-how are you doin liltle motherfuckerH
-i mean honestly you are a really goodH
-shit so nevermind and make you fly a H
-little bit and dondt come break qwerty of course as wellH
+Lorem ipsum dolor sit amet, consecteturH
+adipiscing elit. Aliquam nonH
+sagittis leo, sit amet rutrum orci. H
+Cras sempeH
             hoggych    H
 """
