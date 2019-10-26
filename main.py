@@ -13,14 +13,16 @@ lucky_numbers = [7,8,9]
 
 diff_list = ((0,20),(21,100),(101,200))
 revolver = denester(revolver,16,len(revolver)/16)
-revolver_shot = denester(revolver_shot,8,len(revolver_shot)/8)
+revolver_shot = denester(revolver_shot,16,len(revolver_shot)/16)
 cowboy_alive = denester(cowboy_alive,16,len(cowboy_alive)/16)
+cowboy_dead = denester(cowboy_dead,16,len(cowboy_dead)/16)
 heart = denester(heart,2,len(heart)/2)
 #x = int(input())-1
 x = 2
 print(sequences.lucky_numbers(diff_list[x]))
 print(sequences.prime_numbers(diff_list[x]))
 print(sequences.ulam_numbers(diff_list[x]))
+<<<<<<< HEAD
 #essential.draw()
 draw(revolver,cowboy_alive,heart,your_health,enemy_health,score)
 
@@ -43,3 +45,8 @@ while enemy_health > 0 and your_health > 0:
         print("Ouuch! That hurts", "Your healh is now: ", your_health)
 
 
+=======
+
+
+draw(revolver,cowboy_alive,heart,5,5,134)
+>>>>>>> 08fa2a3bdea496578070699d560ef451c8890688
