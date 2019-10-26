@@ -49,7 +49,5 @@ while enemy_health > 0 and your_health > 0:
 
 '''
 
-text_area = question_text_formator(qustion_text_1)
-print(text_area)
-
+text_area = qustion_area_maker(qustion_text_1)
 draw(text_area,revolver,cowboy_alive,heart,5,5,134)

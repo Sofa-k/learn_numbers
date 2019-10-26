@@ -35,11 +35,11 @@ def draw(text_area,gun,man,heart,user_live,man_live,score):
 
     for each in global_line:
         print(each)
-def question_text_formator(question_text):
+def qustion_area_maker(question_text):
     output_list = []
     i = 0
     while i < 5:
-        output_list.append('| '+ question_text[i] + ' '*(58-len(question_text[i])-1) + '|')
+        output_list.append('|\033[1;33;40m '+ question_text[i] + ' '*(58-len(question_text[i])-1) + '\033[1;37;40m|')
         i += 1
     output_list.insert(0,'+'+'-'*58+'+')
     output_list.append('+'+'-'*58+'+')
