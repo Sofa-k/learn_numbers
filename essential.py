@@ -35,16 +35,15 @@ def draw(text_area,gun,man,heart,user_live,man_live,score):
 
     for each in global_line:
         print(each)
-def question_text_formator(question_text,text_area):
-    text_area = list(text_area)
+def question_text_formator(question_text):
+    output_list = []
     i = 0
-    j = 0
-    while i < len(text_area):
-        if (i != 0 or i != -1) and j < 4:
-            text_area[i+1]= '| '+ question_text[j] + ' '*(58-len(question_text[j])-1) + '|'
-            j += 1
+    while i < 5:
+        output_list.append('| '+ question_text[i] + ' '*(58-len(question_text[i])-1) + '|')
         i += 1
-    return text_area
+    output_list.insert(0,'+'+'-'*58+'+')
+    output_list.append('+'+'-'*58+'+')
+    return output_list
 def denester(asciistr,height,width):
     '''
     (string,int) -> list
