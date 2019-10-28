@@ -1,4 +1,4 @@
-import sequences
+from sequences import *
 from essential import *
 from res import *
 import time
@@ -39,11 +39,42 @@ while i < 10:
 
     i += 1
 
-line = draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134)
-draw(line[0],line[1])
-x = 0
-while x < 10:
-    draw(line[0],anim_global_line[x])
-    time.sleep(0.04)
-    x += 1
+# line = draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134)
+# draw(line[0],line[1])
+# x = 0
+# while x < 10:
+#     draw(line[0],anim_global_line[x])
+#     time.sleep(0.04)
+#     x += 1
+
+man_life_int = 5
+user_life_int = 5
+
+user_difficulty = choose_difficulty()
+
+while man_life_int > 0 and user_life_int > 0:
+    lucky_var = lucky_numbers(diff_list[user_difficulty - 1])
+    prime_var = prime_numbers(diff_list[user_difficulty - 1])
+    ulam_var = lucky_numbers(diff_list[user_difficulty - 1])
+    line = draw_proccessing(text_area,user_live,cowboy_alive,heart,user_life_int,man_life_int,1)
+    draw(line[0],line[1])
+    print(lucky_var,prime_var,ulam_var)
+    #  DRAW   <- Виводиться ТЕКСТ АРЕА з Питанням , змінній question присвоюється номер питання
+    question = 1
+    user_answer = input()
+    if input_validator(user_answer)==True:
+        user_answer = int(user_answer)
+        if ((question==1) and (user_answer==1)) or\
+           ((question==2) and (user_answer==1)) or\
+           ((question==3) and (user_answer==1)):
+            man_life_int -= 1
+            line = draw_proccessing(text_area, user_live, cowboy_alive, heart, user_life_int, man_life_int, 1)
+            draw(line[0], line[1])
+        else:
+            user_life_int -= 1
+    else:
+        continue
+
+print("While has finis")
+
 

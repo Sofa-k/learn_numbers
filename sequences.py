@@ -80,3 +80,25 @@ def ulam_numbers(difficulty):
             arr2.add(i)
     arr = sequence_cut(arr,difficulty)
     return arr[random.randrange(len(arr))]
+
+def input_validator(x):
+    try:
+        x = int(x)
+        if x>0:
+            return True
+        else:
+            print("The number can't be negative")
+            return False
+    except:
+        print("Please enter digits, not symbols")
+        return False
+
+def choose_difficulty():
+    print("choose diffilty from 1 to 3")           #    <-  Ілюстрації до складності на весь екран
+    game_difficulty = input()
+    if input_validator(game_difficulty)==True:
+        game_difficulty = int(game_difficulty)
+        if (game_difficulty>=1) and (game_difficulty<=3):
+            return game_difficulty
+    else:
+        return 1
