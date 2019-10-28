@@ -2,30 +2,39 @@ import sequences
 #from processing_unit import *
 from essential import *
 from res import *
-# _________________
+
 enemy_health = 5
 your_health = 5
 score = 0
 ulam_numbers = [1,2,3]
 prime_numbers = [4,5,6]
 lucky_numbers = [7,8,9]
-# ________________
 
+x=2
 diff_list = ((0,20),(21,100),(101,200))
-text_area = denester(text_area,7,len(text_area)/7)
 revolver = denester(revolver,9,len(revolver)/9)
 qustion_text_1 = denester(question_text_1,5,len(question_text_1)/5)
 revolver_shot = denester(revolver_shot,9,len(revolver_shot)/9)
 cowboy_alive = denester(cowboy_alive,16,len(cowboy_alive)/16)
 cowboy_dead = denester(cowboy_dead,16,len(cowboy_dead)/16)
+user_live = denester(user_live,9,len(user_live)/9)
 heart = denester(heart,2,len(heart)/2)
-#x = int(input())-1
-x = 2
-print(sequences.lucky_numbers(diff_list[x]))
-print(sequences.prime_numbers(diff_list[x]))
-print(sequences.ulam_numbers(diff_list[x]))
+text_area = qustion_area_maker(qustion_text_1)
 
-#essential.draw()
+
+#print(sequences.lucky_numbers(diff_list[x]))
+#print(sequences.prime_numbers(diff_list[x]))
+#print(sequences.ulam_numbers(diff_list[x]))
+
+#! Animation
+user_x_anim = [user_x_anim_1,user_x_anim_2,user_x_anim_3,user_x_anim_4,user_x_anim_5,user_x_anim_6,user_x_anim_7]
+for each in user_x_anim:
+    each = denester(each,9,len(each)/9)
+
+
+line=draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134)
+draw(line[0],line[1])
+
 '''
 draw(revolver,cowboy_alive,heart,your_health,enemy_health,score)
 
@@ -48,6 +57,3 @@ while enemy_health > 0 and your_health > 0:
         print("Ouuch! That hurts", "Your healh is now: ", your_health)
 
 '''
-
-text_area = qustion_area_maker(qustion_text_1)
-draw(text_area,revolver,cowboy_alive,heart,5,5,134)
