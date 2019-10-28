@@ -1,6 +1,10 @@
 import sys
 
-def draw(status_line,global_line):
+def draw(status_line, global_line):
+    '''
+    (list, list) 
+    function prints string lines. 
+    '''
     score = 123
     #printing status_line
     for each in status_line:
@@ -11,7 +15,11 @@ def draw(status_line,global_line):
     for each in global_line:
         print(each)
 
-def qustion_area_maker(question_text):
+def question_area_maker(question_text):
+    '''
+    (string) - > list
+    function returns textbox with a question.
+    '''
     output_list = []
     i = 0
     while i < 5:
@@ -22,7 +30,7 @@ def qustion_area_maker(question_text):
     return output_list
 
 def draw_proccessing(text_area,user,man,heart,user_live,man_live,score):
-
+  
     global_line = []
     status_line = []
     score = 'Score: ' + str(score)
@@ -51,8 +59,8 @@ def draw_proccessing(text_area,user,man,heart,user_live,man_live,score):
 
 def denester(asciistr,height,width):
     '''
-    (string,int) -> list
-    function slices an ascii docstring image into string lines
+    (string,int) - > list
+    function slices an ascii docstring image into string lines.
     >>> denester([--+--X\n--+--X],2)
     [['-', '-', '+', '-', '-'], ['-', '-', '+', '-', '-']]
     '''
