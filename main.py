@@ -18,6 +18,7 @@ qustion_text_1 = denester(question_text_1,5,len(question_text_1)/5)
 revolver_shot = denester(revolver_shot,9,len(revolver_shot)/9)
 cowboy_alive = denester(cowboy_alive,16,len(cowboy_alive)/16)
 cowboy_dead = denester(cowboy_dead,16,len(cowboy_dead)/16)
+user_live = denester(user_live,9,len(user_live)/9)
 heart = denester(heart,2,len(heart)/2)
 #x = int(input())-1
 x = 2
@@ -50,4 +51,4 @@ while enemy_health > 0 and your_health > 0:
 '''
 
 text_area = qustion_area_maker(qustion_text_1)
-draw(text_area,revolver,cowboy_alive,heart,5,5,134)
+draw(text_area,user_live,cowboy_alive,heart,5,5,134)
