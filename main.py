@@ -30,7 +30,8 @@ text_area = qustion_area_maker(qustion_text_1)
 user_x_anim = [user_x_anim_1,user_x_anim_2,user_x_anim_3,user_x_anim_4,user_x_anim_5,user_x_anim_6,user_x_anim_7]
 for each in user_x_anim:
     each = denester(each,9,len(each)/9)
-    
+
+
 line=draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134)
 draw(line[0],line[1])
 

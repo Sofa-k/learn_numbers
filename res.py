@@ -1,4 +1,4 @@
-user_x_anim_1 ="""
+user_x_anim_1 = """
       /  /    \ /‾\                                         H
       \  |     ˙/\‾)                                        H
        \      / ~(‾]--- , KD                                H
@@ -136,7 +136,7 @@ cowboy_x_anim_8 = R"""
           |_|  |_|            H
           /_\  /_\            HHeight16
 """
-user_alive ="""
+user_live ="""
       /  /    \ /‾\                                         H
       \  |     ˙/\‾)                                        H
        \      / ~(‾]--- ,                                   H
