@@ -16,7 +16,18 @@ def sequence_cut(input_list, difficulty):
     return input_list
 
 def lucky_numbers(difficulty):
-
+    '''
+    (int) - > list
+    
+    function chooses lucky numbers from the range depending on difficulty and returns them.
+    
+    >>> lucky_numbers(1)
+    [1, 7, 10, 13, 19]
+    >>> lucky_numbers(2)
+    [23, 28, 31, 32, 44, 49, 68, 70, 79, 82, 86, 91, 94, 97, 100]
+    >>> lucky_numbers(3)
+    [103, 109, 129, 130, 133, 139, 167, 176, 188, 190, 192, 193]
+    '''
     raw = []
     lucky_raw = []
     def eliminator(raw,step):
@@ -38,7 +49,19 @@ def lucky_numbers(difficulty):
     raw = sequence_cut(raw,difficulty)
     return raw[random.randrange(len(raw))]
 
-def prime_numbers(difficulty):
+def prime_numbers(difficulty): 
+    '''
+    (int) - > list
+    
+    function chooses prime numbers from the range depending on difficulty and returns them.
+    
+    >>> prime_numbers(1)
+    [2, 3, 5, 7, 11, 13, 17, 19]
+    >>> prime_numbers(2)
+    [23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101]
+    >>> prime_numbers(3)
+    [103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199]
+    '''
     figures = []
     for i in range(difficulty[1] + 1):
         figures.append(i)
@@ -62,6 +85,18 @@ def prime_numbers(difficulty):
     return prime_numbers[random.randrange(len(prime_numbers))]
 
 def ulam_numbers(difficulty):
+    '''
+    (int) - > list
+    
+    function chooses Ulam numbers from the range depending on difficulty and returns them.
+    
+    >>> ulam_numbers(1)
+    [1, 2, 3, 4, 6, 8, 11, 13, 16, 18]
+    >>> ulam_numbers(2)
+    [26, 28, 36, 38, 47, 48, 53, 57, 62, 69, 72, 77, 82, 87, 97, 99]
+    >>> ulam_numbers(3)
+    [102, 106, 114, 126, 131, 138, 145, 148, 155, 175, 177, 180, 182, 189, 197]
+    '''
     arr = [1,2]
     arr2 = set()
     arr2.add(1)
@@ -80,25 +115,3 @@ def ulam_numbers(difficulty):
             arr2.add(i)
     arr = sequence_cut(arr,difficulty)
     return arr[random.randrange(len(arr))]
-
-def input_validator(x):
-    try:
-        x = int(x)
-        if x>0:
-            return True
-        else:
-            print("The number can't be negative")
-            return False
-    except:
-        print("Please enter digits, not symbols")
-        return False
-
-def choose_difficulty():
-    print("choose diffilty from 1 to 3")           #    <-  Ілюстрації до складності на весь екран
-    game_difficulty = input()
-    if input_validator(game_difficulty)==True:
-        game_difficulty = int(game_difficulty)
-        if (game_difficulty>=1) and (game_difficulty<=3):
-            return game_difficulty
-    else:
-        return 1
