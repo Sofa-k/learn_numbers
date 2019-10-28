@@ -21,33 +21,38 @@ def qustion_area_maker(question_text):
     output_list.append('+'+'-'*58+'+')
     return output_list
 
-def draw_proccessing(text_area,user,man,heart,user_live,man_live,score):
-
+def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,animation=False):
     global_line = []
-    status_line = []
-    score = 'Score: ' + str(score)
-    #add hearts of user
-    heart_u = heart[0]*user_live+heart[1]*user_live
-    heart_u = denester(heart_u,2,len(heart[0])*user_live)
-    #add hearts of man
-    heart_m = heart[0]*man_live+heart[1]*man_live
-    heart_m = denester(heart_m,2,len(heart[0])*man_live)
-    # by default line lenght = 93
-    space1 = ' '*((93//2)-len(heart_u[0])-len(score))
-    space2 = ' '*((93//2)-len(heart_m[0])-len(score))
-    #making status_line
-    status_line.extend(''.join(heart_u[0]+space1+score+space2+heart_m[0]+'H'))
-    status_line.extend(''.join(' '+heart_u[1]+space1+' '*len(score)+space2+' '+heart_m[1]+'H'))
-    status_line = denester(status_line,2,len(status_line)/2)
+    if not animation:
+        status_line = []
+        score = 'Score: ' + str(score)
+        #add hearts of user
+        heart_u = heart[0]*user_live+heart[1]*user_live
+        heart_u = denester(heart_u,2,len(heart[0])*user_live)
+        #add hearts of man
+        heart_m = heart[0]*man_live+heart[1]*man_live
+        heart_m = denester(heart_m,2,len(heart[0])*man_live)
+        # by default line lenght = 93
+        space1 = ' '*((93//2)-len(heart_u[0])-len(score))
+        space2 = ' '*((93//2)-len(heart_m[0])-len(score))
+        #making status_line
+        status_line.extend(''.join(heart_u[0]+space1+score+space2+heart_m[0]+'H'))
+        status_line.extend(''.join(' '+heart_u[1]+space1+' '*len(score)+space2+' '+heart_m[1]+'H'))
+        status_line = denester(status_line,2,len(status_line)/2)
     #making global_line
     for line in range(16):
         if line < 9:
             global_line.extend(''.join(user[line]+man[line]+'H'))
+
         else:
+            
             global_line.extend(''.join(text_area[line-9]+man[line]+'H'))
     global_line = denester(global_line,16,len(global_line)/16)
 
-    return status_line,global_line
+    if animation:
+        return global_line
+    else:
+        return status_line,global_line
 
 def denester(asciistr,height,width):
     '''
